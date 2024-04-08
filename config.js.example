@@ -1,0 +1,18 @@
+// srcディレクトリ
+const SRC = 'src';
+
+// srcフォルダ内のディレクトリ名
+const PATH = '';
+
+// 出力先ディレクトリ
+const DIST = 'dist';
+
+// 登録カテゴリ
+const CATEGORY = '';
+
+// 無視するファイル名
+const IGNORE_FILES = [
+    '.DS_Store'
+];
+
+module.exports = {SRC, DIST, PATH, CATEGORY, IGNORE_FILES}

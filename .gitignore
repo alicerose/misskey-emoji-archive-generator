@@ -4,3 +4,4 @@ node_modules
 *.zip
 src/*
 !src/.gitkeep
+config.js

@@ -1,0 +1,22 @@
+{
+  "name": "misskey-emoji-importer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "emoji": "npm-run-all -s emoji:*",
+    "emoji:remove": "rm -rf dist",
+    "emoji:generate": "mkdir dist && node index.js > ./dist/meta.json",
+    "emoji:archive": "node archive.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "volta": {
+    "node": "20.12.1"
+  },
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "npm-run-all": "^4.1.5"
+  }
+}
