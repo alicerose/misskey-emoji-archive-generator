@@ -2,7 +2,7 @@
 const SRC = 'src';
 
 // srcフォルダ内のディレクトリ名
-const PATH = '';
+const TARGET = '';
 
 // 出力先ディレクトリ
 const DIST = 'dist';
@@ -15,4 +15,4 @@ const IGNORE_FILES = [
     '.DS_Store'
 ];
 
-module.exports = {SRC, DIST, PATH, CATEGORY, IGNORE_FILES}
+module.exports = {SRC, DIST, TARGET, CATEGORY, IGNORE_FILES}

@@ -1,5 +1,5 @@
 const fs = require('fs');
-const {IGNORE_FILES, CATEGORY, PATH, SRC, DIST} = require("./config");
+const {IGNORE_FILES, CATEGORY, SRC, DIST, TARGET} = require("./config");
 const emojis = [];
 
 /**
@@ -12,7 +12,7 @@ function getFileName(file) {
     return file.match(regex)[1] || "";
 }
 
-const files = fs.readdirSync([SRC, PATH].join('/'));
+const files = fs.readdirSync([SRC, TARGET].join('/'));
 files.forEach((file) => {
     if(IGNORE_FILES.includes(file)) {
         return;
@@ -31,10 +31,13 @@ files.forEach((file) => {
         }
     }
     emojis.push(emoji);
-    fs.copyFileSync([SRC, PATH, file].join('/'), [DIST, filename].join('/'));
+    fs.copyFileSync([SRC, TARGET, file].join('/'), [DIST, filename].join('/'));
 });
 
 
 
-const meta = { emojis }
+const meta = {
+    "metaVersion": 2,
+    emojis
+}
 console.log(JSON.stringify(meta));
