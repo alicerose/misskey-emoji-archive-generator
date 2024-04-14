@@ -25,18 +25,27 @@ Scripts for generating zip archive containing `meta.json` to import multiple emo
 * Choose `Import` menu, upload generated zip archive to your misskey drive and start import.
 * Have fun.
 
-## TESTED WITH
+## Tested with
 
 * Sharkey `2024.3.2`
   * Should be worked with Misskey too, but not tested.
 
-## TODO
+## Todo
 
 * Use question prompt instead of specifying directory name in `config.js`.
 * Validate emoji file name.
+
+## Term of use / Disclaimer
+
+* Test at your development environment before you import generated archive into your production environment.
+* You should consider taking backup of your database before you import emojis.
+* Use at your own risk. Author of this script do not take responsibility any result of importing generated archive using this script.
 
 ## Changelogs
 
 ### 2024.04.13 - v0.1
 
 * Initial release.
+* [v0.1.1] update readme.
+* [v0.1.2] add fallback if file name parse failed
+* [v0.1.3] update readme.
