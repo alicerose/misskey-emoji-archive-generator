@@ -9,7 +9,11 @@ const emojis = [];
  */
 function getFileName(file) {
     const regex = /(.*)\..*/;
-    return file.match(regex)[1] || "";
+    const result = file.match(regex);
+    if(result) {
+        return file.match(regex)[1] || "";
+    }
+    return null;
 }
 
 const files = fs.readdirSync([SRC, TARGET].join('/'));
@@ -17,7 +21,6 @@ files.forEach((file) => {
     if(IGNORE_FILES.includes(file)) {
         return;
     }
-    // console.log(file);
 
     const filename = file.replaceAll('-', '_');
 
@@ -30,6 +33,11 @@ files.forEach((file) => {
             "aliases": []
         }
     }
+
+    if(!emoji.emoji.name) {
+        return;
+    }
+
     emojis.push(emoji);
     fs.copyFileSync([SRC, TARGET, file].join('/'), [DIST, filename].join('/'));
 });

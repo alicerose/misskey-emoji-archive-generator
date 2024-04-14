@@ -6,7 +6,8 @@ const DIST = 'dist';
 
 // 無視するファイル名リスト
 const IGNORE_FILES = [
-    '.DS_Store'
+    '.DS_Store',
+    'LICENSE'
 ];
 
 // srcフォルダ内のディレクトリ名
