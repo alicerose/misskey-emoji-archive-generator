@@ -47,5 +47,6 @@ Scripts for generating zip archive containing `meta.json` to import multiple emo
 
 * Initial release.
 * [v0.1.1] update readme.
-* [v0.1.2] add fallback if file name parse failed
+* [v0.1.2] add fallback if file name parse failed.
 * [v0.1.3] update readme.
+* [v0.1.4] add license field.
