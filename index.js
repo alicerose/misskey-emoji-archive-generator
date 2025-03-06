@@ -1,5 +1,5 @@
 const fs = require('fs');
-const {IGNORE_FILES, CATEGORY, SRC, DIST, TARGET} = require("./config");
+const {IGNORE_FILES, CATEGORY, LICENSE, SRC, DIST, TARGET} = require("./config");
 const emojis = [];
 
 /**
@@ -30,7 +30,8 @@ files.forEach((file) => {
         "emoji": {
             "name": getFileName(filename),
             "category": CATEGORY,
-            "aliases": []
+            "aliases": [],
+            "license": LICENSE,
         }
     }
 

@@ -17,7 +17,8 @@ Scripts for generating zip archive containing `meta.json` to import multiple emo
 * Run `npm i` to install dependencies.
 * Copy `config.example.js` and rename to `config.js`
   * Specify target directory name under `src` as `TARGET`
-  * Specify category name you want to register emojis as `CATEGORY`
+  * (optional) Specify category name you want to register emojis as `CATEGORY`
+  * (optional) Specify author or provided license notation as `LICENSE`
 * Create directory containing emoji images under `src`
   * Make sure directory name matches you specified at `config.js`
 * Run `npm run emoji` to generate `meta.json` and zipped archive.
@@ -27,7 +28,7 @@ Scripts for generating zip archive containing `meta.json` to import multiple emo
 
 ## Tested with
 
-* Sharkey `2024.3.2`
+* Sharkey `2024.3.2` / `2025.2.2`
   * Should be worked with Misskey too, but not tested.
 
 ## Todo
@@ -47,5 +48,6 @@ Scripts for generating zip archive containing `meta.json` to import multiple emo
 
 * Initial release.
 * [v0.1.1] update readme.
-* [v0.1.2] add fallback if file name parse failed
+* [v0.1.2] add fallback if file name parse failed.
 * [v0.1.3] update readme.
+* [v0.1.4] add license field.

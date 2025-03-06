@@ -16,4 +16,7 @@ const TARGET = '';
 // 登録カテゴリ
 const CATEGORY = '';
 
+// ライセンス
+const LICENSE = '';
+
 module.exports = {SRC, DIST, TARGET, CATEGORY, IGNORE_FILES}
